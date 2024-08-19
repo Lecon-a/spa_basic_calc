@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator_wrapper {
+    background-color: rgba(87, 86, 86, 0.182);
+    width: 17rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    contain: content;
+    border: 1px solid rgba(100, 100, 100, 0.5);
+}
+
+.display_input {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    margin-bottom: .5rem;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+}
+
+.upper-items {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+}
+
+.controls {
+    display: flex;
+    width: fit-content;
+    gap: .5rem;
+    color: rgba(250, 240, 230, 0.056);
+}
+
+.control {
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.close {
+    background-color: lightcoral;
+}
+
+.minimize {
+    background-color: yellow;
+}
+
+.restore {
+    background-color: lightgreen;
+}
+
+.controls:hover {
+    color: black;
+}
+
+.upper_value, .main_value {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.upper_value {
+    font-size: 1rem;
+    height: 1.5rem;
+}
+
+.main_value {
+    font-size: 2.5rem;
+    padding: .5rem;
+}
+
+.buttons {
+    height: 16rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: .25rem;
+}
+
+.numbers {
+    width: 12rem;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: .25rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .25rem;
+}
+
+.button {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.286);
+}
+
+.options {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: .25rem;
+}
+
+.option {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem; 
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.286);
+}
+
+.button:hover, 
+.option:hover {
+    background-color: rgba(45, 45, 45, 0.466);
+}
+
+.equal_button,
+.equal_button:hover {
+    background-color: rgba(144, 238, 144, 0.513);
+}
