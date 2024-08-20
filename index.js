@@ -15,7 +15,7 @@ buttons.forEach(button => {
                 if (e.target.dataset.value === "." && !isDot) {
                     main_value.textContent += e.target.dataset.value;
                     isDot = true
-                } else if (e.target.dataset.value !== "." && isDot) {
+                } else if (e.target.dataset.value !== ".") {
                     main_value.textContent += e.target.dataset.value;
                 }
             }
