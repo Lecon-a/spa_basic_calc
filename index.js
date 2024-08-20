@@ -8,6 +8,10 @@ let isDot = false;
 
 buttons.forEach(button => {
     button.addEventListener("click", (e) => {
+        if (main_value.textContent === "") {
+            return;
+        }
+
         if (e.target.dataset.value) {
             if (main_value.textContent === '0' && e.target.dataset.value !== ".") {
                 main_value.textContent = e.target.dataset.value;
@@ -25,6 +29,10 @@ buttons.forEach(button => {
 
 options.forEach(option => { 
     option.addEventListener("click", (e) => { 
+        if (main_value.textContent === "") {
+            return;
+        }
+
         if (upper_value.textContent === "") {
             input_value = main_value.textContent;
             upper_value.textContent = input_value + " " + e.target.dataset.option;
@@ -39,6 +47,11 @@ options.forEach(option => {
 })
 
 equal_button.addEventListener("click", (e) => {
+
+    if (main_value.textContent === "") {
+            return;
+    }
+    
     if (upper_value.textContent !== "" && main_value.textContent !== '0') { 
 
         // this to get all values needed for the operation
